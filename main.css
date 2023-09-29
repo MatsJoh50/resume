@@ -3,7 +3,7 @@
     --second-color: #f8f8f4;
     --third-color: #7e9271;
     --fourth-color: #ffcab0;
-    --width: 90%;
+    --width: 90vw;
 }
 
 html {
@@ -19,7 +19,7 @@ body {
     margin: 0px;
     max-height: fit-content;
     box-shadow: #7e9271;
-    
+
 }
 
 div {
@@ -32,7 +32,7 @@ div {
     /* border: 1px solid; */
 }
 
-#devdev1{
+#devdev1 {
     position: absolute;
     top: 30vh;
     left: 5vw;
@@ -42,7 +42,8 @@ div {
     font-size: 15vh;
 
 }
-#devdev2{
+
+#devdev2 {
     position: absolute;
     top: 10vh;
     right: 0vw;
@@ -51,7 +52,8 @@ div {
     color: #7e9271;
     font-size: 5vh;
 }
-#devdot{
+
+#devdot {
     color: #ffcab0;
 }
 
@@ -71,30 +73,103 @@ div {
     position: absolute;
     top: 0px;
     height: 100vh;
-    width: 90%;
+    width: 90vw;
     background-color: var(--second-color-color);
 
 }
 
-#img-header{
+#img-header {
     position: absolute;
-    right: 0px;
+    right: 1vw;
     bottom: 0px;
 }
 
-.left{
-    margin-left: 5%;
+.base{
+    width: 90vw;
+    height: 45vh;
+    background-color: aqua;
+    margin: auto;
+
+}
+.left {
+    position:relative;
+    margin-left: 0vw;
     margin-right: auto;
     height: 45vh;
-    width: 44vw;
+    width: 50vw;
     background-color: var(--second-color);
+    /* animation-direction: normal; */
 }
 
-.right{
+.right {
     margin-left: auto;
     margin-right: 5%;
     height: 45vh;
     width: 44vw;
     background-color: var(--second-color);
-    
+    /* animation: moveFromLeft 2s infinite; */
+    /* animation-name: moveFromLeft; */
+    /* animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; */
+
+}
+
+.move {
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveFromLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+
+    50.001% {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+
+    50.002% {
+        opacity: 1;
+        transform: translateX(-100vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveFromRight {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+
+    50.001% {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+
+    50.002% {
+        opacity: 1;
+        transform: translateX(-100vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
