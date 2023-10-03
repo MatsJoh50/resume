@@ -88,6 +88,7 @@ body {
 
 .base {
     background-color: var(--second-color);
+    position: relative;
 
     margin-top: 2vh;
     margin-left: auto;
@@ -96,9 +97,12 @@ body {
     max-width: var(--width);
     min-height: 45vh;
 
+    padding-bottom: 5px;
+
 }
 
 .text{
+    display: flex;
     text-align-last: left;
     margin: 1vw;
     text-align: justify;
@@ -107,10 +111,12 @@ body {
 }
 
 .quote{
+    position: absolute;
+    left: 55%;
+    top: 30%;
+
     color: var(--third-color);
-    position: relative;
-    left: 550px;
-    bottom: 150px;
+    display: flex;
     text-align: justify;
     text-align: center;
     font-size: 5vh;

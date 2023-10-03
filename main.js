@@ -6,11 +6,11 @@ function alternateSpanPossition() {
     while (0 < elements.length) {
       if (elements.length % 2 == 0) {
         // elements get "span-left" class
-        elements[0].classList.add("left", "base", "inner");
+        elements[0].classList.add("left", "base", "shadow");
         elements[0].classList.remove("poss");
       } else {
         // elements get "span-right" class
-        elements[0].classList.add("right", "base", "inner");
+        elements[0].classList.add("right", "base", "shadow");
         elements[0].classList.remove("poss");
       }
     }
